@@ -26,9 +26,28 @@ backgroundIcon.innerHTML = ".backgroundIcon {\
 header.appendChild(canvasClass); 
 header.appendChild(backgroundIcon);
 
+function alertSize() { //got this function from internet to accurately get visible window size
+    var myWidth = 0, myHeight = 0;
+    if( typeof( window.innerWidth ) == 'number' ) {
+      //Non-IE
+      myWidth = window.innerWidth;
+      myHeight = window.innerHeight;
+    } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+      //IE 6+ in 'standards compliant mode'
+      myWidth = document.documentElement.clientWidth;
+      myHeight = document.documentElement.clientHeight;
+    } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+      //IE 4 compatible
+      myWidth = document.body.clientWidth;
+      myHeight = document.body.clientHeight;
+    }
+    dimensions = {h : myHeight, w: myWidth}
+    return dimensions;
+  }
 
-var windowHeight = document.body.clientHeight; //set dimentions as of body
-var windowWidth = document.body.clientWidth;
+var dimensionWindow = alertSize();
+var windowHeight = dimensionWindow.h; //set dimentions as of body
+var windowWidth = dimensionWindow.w;
 
 var backgroundIconNumber = document.getElementsByClassName('backgroundIcon');
 var backgroundIconObjectArray = [];
@@ -80,8 +99,9 @@ function moveBackgroundIcon(object){ //create initial points and start moving th
 }
 
 window.addEventListener("resize", function(){ //resize the hight and width variables plus canvas variables
-    windowHeight = document.body.clientHeight;
-    windowWidth = document.body.clientWidth;
+    var dimensionWindow = alertSize();
+    windowHeight = dimensionWindow.h;
+    windowWidth = dimensionWindow.w;
     let canvasArray = document.getElementsByClassName('canvasClass');
     for(let i = 0; i < canvasArray.length; i++){ //change canvas width
         canvasArray[i].width = windowWidth;
