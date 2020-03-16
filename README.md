@@ -35,6 +35,20 @@ Every element can have different moving speed which can be changed by adding cus
 
 Recomended speed is anything between 1-10, if ommited default speed is 3.
 
+## Note
+
+* If the particles does not follow the image correctly on a mobile phones resolution add this line in your header tag: 
+
+~~~ html
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+~~~
+
+* I have uploaded html file as example how to use the library. I have left the rocket.svg image to be used as example with the particles which looks like rocket flame. 
+
+* Another note is that if you are using your own svg, image or element keep in mind that the particles would appear in the middle of the bottom side of the element as such: 
+
+![particles possition compared to image](image/filename%20%example.jpg)
+
 ## Author 
 
 Written by Atanas Kolev 
