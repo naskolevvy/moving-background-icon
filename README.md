@@ -47,7 +47,7 @@ Recomended speed is anything between 1-10, if ommited default speed is 3.
 
 * Another note is that if you are using your own svg, image or element keep in mind that the particles would appear in the middle of the bottom side of the element as such: 
 
-![particles possition compared to image](example2.jpg)
+![particles possition compared to image](example.jpg)
 
 ## Author 
 
