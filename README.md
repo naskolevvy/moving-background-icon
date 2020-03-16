@@ -45,6 +45,8 @@ Recomended speed is anything between 1-10, if ommited default speed is 3.
 
 * I have uploaded html file as example how to use the library. I have left the rocket.svg image to be used as example with the particles which looks like rocket flame. 
 
+* if you don't see the icon by any chance check if there is an element that takes the whole screen and has a z-index bigger than -1 (like background image)
+
 * Another note is that if you are using your own svg, image or element keep in mind that the particles would appear in the middle of the bottom side of the element as such: 
 
 ![particles possition compared to image](example.jpg)
