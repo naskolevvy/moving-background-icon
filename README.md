@@ -52,7 +52,3 @@ Recomended speed is anything between 1-10, if ommited default speed is 3.
 ## Author 
 
 Written by Atanas Kolev 
-
-## License
-
-No license, anyone can use and change the library as you wish
