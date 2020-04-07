@@ -47,8 +47,8 @@ Recomended speed is anything between 1-10, if ommited default speed is 3.
 
 ~~~ css
 .backgroundIcon{
-  width: width-in-pixels;
-  height: height-in-pixels;
+  width: width-in-pixels !important;
+  height: height-in-pixels !important;
 }
 ~~~
 
