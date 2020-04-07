@@ -43,6 +43,15 @@ Recomended speed is anything between 1-10, if ommited default speed is 3.
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 ~~~
 
+* To edit the size of the image do the following in your css file: 
+
+~~~ css
+.backgroundIcon{
+  width: width-in-pixels;
+  height: height-in-pixels;
+}
+~~~
+
 * I have uploaded html file as example how to use the library. I have left the rocket.svg image to be used as example with the particles which looks like rocket flame. 
 
 * if you don't see the icon by any chance check if there is an element that takes the whole screen and has a z-index bigger than -1 (like background image)
